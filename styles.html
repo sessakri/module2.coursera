@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2 - Responsive Web Design</title>
+
+    <!-- Code CSS directement dans le fichier HTML -->
+    <style>
+        /* Reset global pour éviter les marges/paddings par défaut */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style global du body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Couleur de fond de la page */
+        }
+
+        /* Style de l'en-tête */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        /* Style des sections */
+        .section {
+            position: relative;
+            padding: 20px;
+            margin: 10px;
+            background-color: #dcdcdc; /* Couleur de fond de chaque section */
+            border: 1px solid #000;
+        }
+
+        /* Style du titre de chaque section */
+        .section-title {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #8e44ad;
+            color: white;
+            padding: 5px 10px;
+            font-size: 1.25em;
+            border: 1px solid #000;
+        }
+
+        /* Style des paragraphes */
+        section p {
+            margin-top: 40px; /* Pour éviter que le texte ne chevauche le titre */
+            line-height: 1.5;
+        }
+
+        /* Mise en page responsive */
+
+        /* Desktop view (992px et plus) */
+        @media (min-width: 992px) {
+            .section {
+                width: 32%;
+                float: left;
+                margin-right: 2%;
+            }
+
+            .section:last-child {
+                margin-right: 0;
+            }
+        }
+
+        /* Tablet view (768px - 991px) */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .section {
+                width: 48%;
+                float: left;
+                margin-right: 4%;
+            }
+
+            .section:last-child {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+
+        /* Mobile view (767px et moins) */
+        @media (max-width: 767px) {
+            .section {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête de la page -->
+    <header>
+        <h1>Responsive Web Design</h1>
+    </header>
+
+    <!-- Première section -->
+    <section class="section" id="section1">
+        <div class="section-title">Chicken</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut leo nisi. Nullam sed tincidunt magna. Nam vehicula suscipit ante, ac condimentum leo auctor et.</p>
+    </section>
+
+    <!-- Deuxième section -->
+    <section class="section" id="section2">
+        <div class="section-title">Beef</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut leo nisi. Nullam sed tincidunt magna. Nam vehicula suscipit ante, ac condimentum leo auctor et.</p>
+    </section>
+
+    <!-- Troisième section -->
+    <section class="section" id="section3">
+        <div class="section-title">Sushi</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut leo nisi. Nullam sed tincidunt magna. Nam vehicula suscipit ante, ac condimentum leo auctor et.</p>
+    </section>
+
+</body>
+</html>
